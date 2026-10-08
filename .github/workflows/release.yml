@@ -1,0 +1,82 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Tag to create and release (e.g. v1.0.0)"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Publish release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Syntax check
+        run: python -m py_compile 8vert-enhanced.py
+
+      - name: Create tag if dispatched manually
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git tag -a "${{ github.event.inputs.tag }}" -m "Release ${{ github.event.inputs.tag }}"
+          git push origin "${{ github.event.inputs.tag }}"
+
+      - name: Build standalone binary
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y python3-tk
+          pip install pyinstaller
+          pyinstaller --onefile --name 8vert-enhanced 8vert-enhanced.py
+
+      - name: Package source
+        run: |
+          mkdir -p dist-pkg
+          cp 8vert-enhanced.py README.md LICENSE SECURITY.md dist-pkg/
+          tar -czf 8vert-enhanced-source.tar.gz -C dist-pkg .
+
+      - name: Create GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            dist/8vert-enhanced
+            8vert-enhanced-source.tar.gz
+          generate_release_notes: true
+          body: |
+            ## 8vert-enhanced
+
+            An all-in-one conversion, calculation and notes toolkit.
+
+            ### Downloads
+
+            | File | Platform |
+            | ---- | -------- |
+            | `8vert-enhanced` | Linux x86-64 (standalone binary) |
+            | `8vert-enhanced-source.tar.gz` | Any platform with Python 3.8+ |
+
+            The standalone binary bundles Python and tkinter, so no Python
+            installation is required on Linux. On Windows or macOS, unpack the
+            source archive and run:
+
+            ```
+            python3 8vert-enhanced.py
+            ```
+
+            ### A note
+
+            This is a fork of [8vert](https://github.com/shozanthebozan/8vert) by
+            **shozanthebozan**, who created the original project. All credit for
+            the original concept, design, and implementation goes to him.
