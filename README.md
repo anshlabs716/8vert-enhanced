@@ -19,8 +19,11 @@
 
 - [🧠 About](#-about)
 - [✨ Features](#-features)
-- [☕ Requirements](#-requirements)
+- [☕ Prerequisites](#-prerequisites)
+  - [Check what you have](#check-what-you-have)
+  - [Installing tkinter](#installing-tkinter)
 - [🚀 Installation](#-🚀-installation)
+- [🗂️ Where your data lives](#-where-your-data-lives)
 - [📂 Project Structure](#-project-structure)
 - [📝 Notes System](#-notes-system)
 - [💻 Platform](#-platform)
@@ -68,19 +71,76 @@ Alongside conversions and calculations, the project includes a notes system that
 
 ---
 
-## ☕ Requirements
+## ☕ Prerequisites
 
-You need Python installed on your system.
+**8vert-enhanced has no third-party dependencies.** Everything it uses ships with
+Python itself — there is nothing to `pip install`.
+
+You need two things:
+
+| Requirement | Notes |
+| ----------- | ----- |
+| **Python 3.6+** | 3.8 or newer recommended; CI tests 3.8 – 3.13 |
+| **tkinter** | Bundled with Python, but sometimes packaged separately |
+
+### Check what you have
 
 ~~~~bash
 python3 --version
+python3 -c "import tkinter; print('tkinter OK')"
 ~~~~
 
-Python **3.6+** is recommended.
+If that second command errors with `ModuleNotFoundError: No module named 'tkinter'`,
+install it using the steps below. This is the single most common setup problem.
+
+### Installing tkinter
+
+**🐧 Debian / Ubuntu / Mint**
+
+~~~~bash
+sudo apt update
+sudo apt install python3-tk
+~~~~
+
+**📦 Arch / Manjaro**
+
+~~~~bash
+sudo pacman -S tk
+~~~~
+
+**🍎 Fedora**
+
+~~~~bash
+sudo dnf install python3-tkinter
+~~~~
+
+**🟠 openSUSE**
+
+~~~~bash
+sudo zypper install python3-tk
+~~~~
+
+**🍎 macOS** (python.org installers)
+
+Tk ships separately as a `.pkg`:
+
+1. Open <https://www.python.org/downloads/macos/>
+2. Download the matching installer for your Python version
+3. Run it and select **"Install tkinter for Python 3.x"** from the optional components
+
+Homebrew's `python-tk` also works: `brew install python-tk`
+
+**🪟 Windows**
+
+Included with the official installer from <https://www.python.org/downloads/windows/>.
+Tick **"tcl/tk and IDLE"** during setup. If you installed Python without it, re-run
+the installer and choose Modify.
 
 ---
 
 ## 🚀 Installation
+
+### Option 1 — Run from source (all platforms)
 
 Clone the repository:
 
@@ -89,19 +149,55 @@ git clone https://github.com/anshlabs716/8vert-enhanced.git
 cd 8vert-enhanced
 ~~~~
 
-Run the program:
+Launch it:
 
 ~~~~bash
 python3 8vert-enhanced.py
 ~~~~
 
-On Windows, you may need:
+On Windows:
 
 ~~~~powershell
 python 8vert-enhanced.py
 ~~~~
 
-Settings, history, and notes are stored in `~/.8vert-enhanced/`.
+No install step and no build step — this is the whole thing.
+
+### Option 2 — Download a release (Linux)
+
+Grab `8vert-enhanced` from the [releases page](https://github.com/anshlabs716/8vert-enhanced/releases),
+`chmod +x` it, and run it. That binary bundles Python and tkinter, so nothing needs
+to be installed:
+
+~~~~bash
+chmod +x 8vert-enhanced
+./8vert-enhanced
+~~~~
+
+### Option 3 — Bundle it yourself
+
+To ship a single-file build of your own:
+
+~~~~bash
+pip install pyinstaller
+pyinstaller --onefile --name 8vert-enhanced 8vert-enhanced.py
+~~~~
+
+The binary lands in `dist/`.
+
+---
+
+## 🗂️ Where your data lives
+
+Settings, calculation history, and saved notes are written to:
+
+~~~~text
+~/.8vert-enhanced/
+~~~~
+
+Created automatically on first run. Delete that folder to reset the app to a clean
+state. Notes you save as Markdown or plain text live here too, so they're plain
+files you can back up or read with any editor.
 
 ---
 
