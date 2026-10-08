@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-enhanced.py - All-in-One Calculator & Converter
+8vert-enhanced.py - All-in-One Calculator & Converter
 Liquid Glass theme · WM Wobble · Fullscreen · Fast typing
 """
 
@@ -15,7 +15,7 @@ from datetime import datetime
 # =============================================================================
 # CONFIG
 # =============================================================================
-CONFIG_DIR = os.path.expanduser("~/.enhanced")
+CONFIG_DIR = os.path.expanduser("~/.8vert-enhanced")
 os.makedirs(CONFIG_DIR, exist_ok=True)
 
 CONFIG_FILE = os.path.join(CONFIG_DIR, "config.json")
@@ -114,7 +114,7 @@ CONVERTERS = {
 class App:
     def __init__(self, root):
         self.root = root
-        self.root.title("Enhanced")
+        self.root.title("8vert-enhanced")
         self.root.geometry("1200x850")
         self.root.minsize(1050, 750)
         self.root.configure(bg=COLORS["bg"])
@@ -425,7 +425,7 @@ class App:
         self.title_bar.pack(fill=tk.X, pady=(0, 5))
         self.title_bar.pack_propagate(False)
 
-        tk.Label(self.title_bar, text="✦ Enhanced", font=("Segoe UI", 18, "bold"),
+        tk.Label(self.title_bar, text="✦ 8vert-enhanced", font=("Segoe UI", 18, "bold"),
                  bg=COLORS["bg2"], fg=COLORS["accent"]).pack(side=tk.LEFT, padx=20)
 
         ctrl = tk.Frame(self.title_bar, bg=COLORS["bg2"])
@@ -1083,7 +1083,7 @@ class App:
         info.pack(fill=tk.X, pady=10)
         tk.Label(info, text="📁 Data Directory", font=("Segoe UI", 13, "bold"),
                  bg=COLORS["bg2"], fg=COLORS["fg"]).pack(anchor="w")
-        tk.Label(info, text="~/.enhanced/", font=("Segoe UI", 11),
+        tk.Label(info, text="~/.8vert-enhanced/", font=("Segoe UI", 11),
                  bg=COLORS["bg2"], fg=COLORS["fg2"]).pack(anchor="w", pady=(2, 10))
 
         btn_row = tk.Frame(s, bg=COLORS["bg2"])

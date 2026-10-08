@@ -2,7 +2,7 @@
 
 ## Supported Versions
 
-Enhanced is a small, actively maintained personal tool. Security fixes land on the
+8vert-enhanced is a small, actively maintained personal tool. Security fixes land on the
 default branch and are released with the latest commit rather than tagged patch
 series.
 
@@ -15,7 +15,7 @@ There are no tagged releases, so "latest `main`" is the only supported version.
 
 ## Threat Model
 
-Enhanced runs entirely on your machine as a desktop GUI. It **makes no network
+8vert-enhanced runs entirely on your machine as a desktop GUI. It **makes no network
 requests** — the source imports only `tkinter`, `math`, `re`, `json`, `os`, and
 `datetime`, with no socket, HTTP, or subprocess usage. There is no server, no
 account, and no telemetry.
@@ -24,8 +24,8 @@ The realistic risks are therefore local, not remote:
 
 | Surface | Where | Notes |
 | ------- | ----- | ----- |
-| Calculator expression evaluation | `enhanced.py` (`eval`) | Input is filtered to `[0-9+\-*/.()% ]` and evaluated with `__builtins__` removed, so no name or attribute access is possible. |
-| Filesystem writes | `~/.enhanced/` | Config, history, and saved notes. A malicious or corrupted file here could affect the app on next launch. |
+| Calculator expression evaluation | `8vert-enhanced.py` (`eval`) | Input is filtered to `[0-9+\-*/.()% ]` and evaluated with `__builtins__` removed, so no name or attribute access is possible. |
+| Filesystem writes | `~/.8vert-enhanced/` | Config, history, and saved notes. A malicious or corrupted file here could affect the app on next launch. |
 | Imported files | Notes you open in the editor | Notes are text only; nothing is executed on open. |
 
 If you find a way to escape the calculator sandbox or make the app execute code
@@ -60,7 +60,7 @@ will be prioritised.
 
 ## Scope
 
-**In scope:** code in `enhanced.py`, sandbox escapes, unsafe file handling, crashes
+**In scope:** code in `8vert-enhanced.py`, sandbox escapes, unsafe file handling, crashes
 caused by malformed input.
 
 **Out of scope:** vulnerabilities in Python itself or the standard library,

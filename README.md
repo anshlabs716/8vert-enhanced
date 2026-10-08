@@ -1,10 +1,10 @@
-# ⚡ Enhanced
+# ⚡ 8vert-enhanced
 
 <div align="center">
 
 ### 🧮 An All-in-One Conversion, Calculation & Notes Toolkit
 
-**Enhanced is a fork of my friend's original project — [8vert](https://github.com/shozanthebozan/8vert)**
+**8vert-enhanced is a fork of my friend's original project — [8vert](https://github.com/shozanthebozan/8vert)**
 
 [![Python](https://img.shields.io/badge/Python-3.6%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-Apache%202.0-green?style=for-the-badge&logo=apache&logoColor=white)](https://www.apache.org/licenses/LICENSE-2.0)
@@ -35,7 +35,7 @@
 
 ## 🧠 About
 
-**Enhanced** is an all-in-one Python conversion and calculation toolkit with an integrated notes system.
+**8vert-enhanced** is an all-in-one Python conversion and calculation toolkit with an integrated notes system.
 
 This project is a fork of my friend's first programming project, [**8vert**](https://github.com/shozanthebozan/8vert), built on the goal of expanding the original idea into a more capable and useful utility. Full credit for the original concept and design goes to him — this fork carries his work forward.
 
@@ -92,16 +92,16 @@ cd 8vert-enhanced
 Run the program:
 
 ~~~~bash
-python3 enhanced.py
+python3 8vert-enhanced.py
 ~~~~
 
 On Windows, you may need:
 
 ~~~~powershell
-python enhanced.py
+python 8vert-enhanced.py
 ~~~~
 
-Settings, history, and notes are stored in `~/.enhanced/`.
+Settings, history, and notes are stored in `~/.8vert-enhanced/`.
 
 ---
 
@@ -109,7 +109,7 @@ Settings, history, and notes are stored in `~/.enhanced/`.
 
 ~~~~text
 8vert-enhanced/
-├── enhanced.py
+├── 8vert-enhanced.py
 ├── .gitignore
 ├── LICENSE
 ├── README.md
@@ -229,7 +229,7 @@ See [`LICENSE`](LICENSE) for the full license text.
 
 <div align="center">
 
-### ⚡ Enhanced
+### ⚡ 8vert-enhanced
 
 **Convert • Calculate • Write • Save**
 
