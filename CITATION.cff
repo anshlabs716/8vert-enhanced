@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use 8vert-enhanced in your work, please cite it as below."
+title: "8vert-enhanced"
+type: software
+authors:
+  - family-names: "Bhatia"
+    given-names: "Ansh"
+    alias: "anshlabs716"
+repository-code: "https://github.com/anshlabs716/8vert-enhanced"
+license: "NOASSERTION"
+abstract: "8vert-enhanced"
