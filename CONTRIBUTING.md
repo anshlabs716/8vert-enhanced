@@ -37,7 +37,7 @@ cd 8vert-enhanced
 
 Use short, imperative subjects, for example:
 
-```
+```text
 fix: correct permissions request on first launch
 docs: clarify export format
 ```

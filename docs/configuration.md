@@ -2,8 +2,6 @@
 
 How to configure 8vert-enhanced.
 
-# Configuration
-
 Reference for configuring 8vert-enhanced.
 
 ## Where configuration lives

@@ -2,8 +2,6 @@
 
 High-level structure of 8vert-enhanced.
 
-# Architecture
-
 This page describes the high-level structure of 8vert-enhanced. It is a starting
 point and is updated as the implementation evolves.
 
@@ -13,7 +11,7 @@ point and is updated as the implementation evolves.
 
 ## Main components
 
-- `**Python standard library** (incl. Tkinter)`
+- **Python standard library** (incl. Tkinter)
 
 ## Data flow
 

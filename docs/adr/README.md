@@ -2,8 +2,6 @@
 
 Architecture decision records for 8vert-enhanced.
 
-# Architecture Decision Records
-
 This directory records significant architecture decisions for 8vert-enhanced.
 
 ## What is an ADR?
