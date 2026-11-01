@@ -330,6 +330,32 @@ This makes problems much easier to reproduce and fix.
 
 ---
 
+## 📁 Project Files
+
+```text
+8vert-enhanced/
+├── .editorconfig
+├── .gitattributes
+├── .github/
+├── .gitignore
+├── .markdownlint-cli2.jsonc
+├── 8vert-enhanced.py
+├── CHANGELOG.md
+├── CITATION.cff
+├── CODE_OF_CONDUCT.md
+├── COMPATIBILITY.md
+├── CONTRIBUTING.md
+├── LICENSE
+├── README.md
+├── SECURITY.md
+├── SUPPORT.md
+├── THIRD_PARTY_NOTICES.md
+├── UPSTREAM.md
+└── docs/
+```
+
+---
+
 ## 📜 License
 
 This project is licensed under the **Apache License 2.0**.
