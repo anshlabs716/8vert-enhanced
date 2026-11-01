@@ -301,6 +301,21 @@ This makes problems much easier to reproduce and fix.
 ├── .editorconfig
 ├── .gitattributes
 ├── .github/
+│   ├── CODEOWNERS
+│   ├── CONTRIBUTING.md
+│   ├── ISSUE_TEMPLATE/
+│   │   ├── bug_report.yml
+│   │   ├── config.yml
+│   │   ├── feature_request.yml
+│   │   └── question.yml
+│   ├── PULL_REQUEST_TEMPLATE.md
+│   ├── release.yml
+│   └── workflows/
+│       ├── ci.yml
+│       ├── links.yml
+│       ├── markdown-lint.yml
+│       ├── release.yml
+│       └── security.yml
 ├── .gitignore
 ├── .markdownlint-cli2.jsonc
 ├── 8vert-enhanced.py
@@ -309,13 +324,30 @@ This makes problems much easier to reproduce and fix.
 ├── CODE_OF_CONDUCT.md
 ├── COMPATIBILITY.md
 ├── CONTRIBUTING.md
+├── docs/
+│   ├── adr/
+│   │   └── README.md
+│   ├── architecture.md
+│   ├── calculations.md
+│   ├── configuration.md
+│   ├── conversions.md
+│   ├── data-formats.md
+│   ├── development.md
+│   ├── faq.md
+│   ├── index.md
+│   ├── installation.md
+│   ├── notes-and-storage.md
+│   ├── releasing.md
+│   ├── testing.md
+│   ├── third-party-dependencies.md
+│   ├── troubleshooting.md
+│   └── usage.md
 ├── LICENSE
 ├── README.md
 ├── SECURITY.md
 ├── SUPPORT.md
 ├── THIRD_PARTY_NOTICES.md
-├── UPSTREAM.md
-└── docs/
+└── UPSTREAM.md
 ```
 
 ---
