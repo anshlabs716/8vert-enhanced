@@ -201,42 +201,6 @@ files you can back up or read with any editor.
 
 ---
 
-## 📁 Project Files
-
-```text
-8vert-enhanced/
-├── .editorconfig
-├── .gitattributes
-├── .github/
-├── .gitignore
-├── .markdownlint-cli2.jsonc
-├── 8vert-enhanced.py
-├── CHANGELOG.md
-├── CITATION.cff
-├── CODE_OF_CONDUCT.md
-├── COMPATIBILITY.md
-├── CONTRIBUTING.md
-├── docs/
-├── LICENSE
-├── README.md
-├── SECURITY.md
-├── SUPPORT.md
-├── THIRD_PARTY_NOTICES.md
-├── UPSTREAM.md
-```
-
-
-~~~~text
-8vert-enhanced/
-├── 8vert-enhanced.py
-├── .gitignore
-├── LICENSE
-├── README.md
-└── SECURITY.md
-~~~~
-
----
-
 ## 📝 Notes System
 
 One of the main additions carried over from the revamp is the ability to create and save notes.
